@@ -30,6 +30,7 @@ Parse `ARGUMENTS` to detect topic. If empty or unrecognized, show topic menu.
 | `examples` | Walk through reference pages |
 | `create` | Step-by-step: create your first page |
 | `responsive` | Breakpoint system + utility classes |
+| `brainstorm` | Think through your design before building |
 
 ## Pre-Flight Checks
 
@@ -56,6 +57,7 @@ Use `AskUserQuestion` with header "Guide Topic":
 - **Examples** — "Walk through real reference pages (order list, order detail, dashboard)"
 - **Create** — "Step-by-step guide to create your first prototype page"
 - **Responsive** — "Learn the breakpoint system and responsive utility classes"
+- **Brainstorm** — "Think through your design before building — structured techniques to explore options"
 
 ## Topic: Components
 
@@ -135,6 +137,21 @@ Step-by-step guide to creating a first page:
    - "Make this layout responsive — 1 column on mobile, 3 on desktop"
    - "Hide the sidebar stats on mobile screens"
    - "Add responsive typography to the page headings"
+
+## Topic: Brainstorm
+
+1. Explain what `/design-brainstorm` does: "Before building a page, you can brainstorm the design with me. I'll help you think through who it's for, explore layout options, and catch usability issues — all before writing any code."
+2. Show the 4 modes:
+   - **Full** — "I need a new page" → Define goal → Explore layouts → Test the flow → Check usability
+   - **Improve** — "This page feels off" → Audit usability → Find root cause → Suggest fixes
+   - **Decide** — "Table or cards?" → Compare constraints → Recommend best fit
+   - **Organize** — "Too much info on this page" → Map content → Group by priority → Pick components
+3. Prompt examples:
+   - "Brainstorm a dashboard page for tracking seller performance"
+   - "How should I show order status — badges or a timeline?"
+   - "This order list page feels cluttered, help me improve it"
+   - "I have 15 fields to show on a detail page, how should I organize them?"
+4. Note: "Brainstorm saves a design brief you can reference later. When you're ready, just say 'build this' and I'll use the brief as the starting point."
 
 ## Response Style
 
