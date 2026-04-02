@@ -19,12 +19,31 @@ export interface OrderStatus {
 // --- Factoring types ---
 
 export interface FactoringBuyer {
+  id: string
   name: string
   siren: string
+  vat: string
   city: string
   address: string
   contactName: string
   contactEmail: string
+  eligible: boolean
+  eligibilityDate: string
+  requestCount: number
+  availableCredit: number
+}
+
+export interface FactoringOrder {
+  id: string
+  reference: string
+  buyerId: string
+  buyerName: string
+  products: string
+  amount: number
+  currency: string
+  status: 'draft' | 'submitted' | 'in-review' | 'approved' | 'shipped' | 'delivered' | 'funded'
+  createdDate: string
+  invoiceRef?: string
 }
 
 export interface FactoringDocument {

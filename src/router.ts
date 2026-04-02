@@ -33,7 +33,7 @@ const routes = [
   {
     path: '/factoring/new/review',
     component: () => import('@/pages/FactoringReviewPage.vue'),
-    meta: { title: 'Review & Submit', icon: 'orders', layout: 'connected' },
+    meta: { title: 'New Financing Request', icon: 'orders', layout: 'connected' },
   },
   {
     path: '/factoring/request/:id',

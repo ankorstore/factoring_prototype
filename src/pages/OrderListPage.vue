@@ -1,5 +1,12 @@
 <template>
   <div class="order-list-page">
+    <div class="order-list-page__header">
+      <h2 class="order-list-page__title">Orders</h2>
+      <AkButton color="primary" symbol="plus" @click="router.push('/factoring/new')">
+        Import an external order
+      </AkButton>
+    </div>
+
     <OrderFilterBar :statuses="statuses" @filter="onFilter" />
 
     <AkTable
@@ -127,6 +134,19 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.order-list-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-list-page__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
 }
 
 .order-list-page__pagination {
