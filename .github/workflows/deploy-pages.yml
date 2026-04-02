@@ -39,9 +39,22 @@ jobs:
       - name: Scan for sensitive data
         run: npm run scan:sensitive
 
+      - name: Detect base path from GitHub Pages URL
+        id: base
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          URL=$(gh api "repos/${{ github.repository }}/pages" --jq '.html_url' 2>/dev/null || echo "")
+          if [ -n "$URL" ]; then
+            BASE_PATH=$(echo "$URL" | sed -E 's|https?://[^/]+(.*/)|\1|')
+          else
+            BASE_PATH="/"
+          fi
+          echo "path=$BASE_PATH" >> "$GITHUB_OUTPUT"
+
       - run: npm run build
         env:
-          GITHUB_PAGES: true
+          VITE_BASE_PATH: ${{ steps.base.outputs.path }}
 
       - uses: actions/upload-pages-artifact@v4
         with:

@@ -8,7 +8,6 @@
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "upgrade-ds": "npm update @ankorstore/design-system",
-    "deploy": "GITHUB_PAGES=true npm run build && gh-pages -d dist --dotfiles",
     "scan:sensitive": "node scripts/scan-sensitive-data.mjs",
     "sync-ds": "node scripts/sync-ds.js",
     "prepare": "husky"

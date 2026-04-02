@@ -43,7 +43,23 @@ Run `npm run dev` in background via Bash.
 
 Tell user: "Dev server is running at http://localhost:3000 — open it in your browser!"
 
-### Step 5: Welcome & Example Prompts
+### Step 5: Choose Your Experience Level
+
+Ask the user using AskUserQuestion:
+
+**"Are you comfortable with code and technical terms like Vue, TypeScript, and git? This helps me adjust how I talk to you."**
+
+Options:
+- **"Not really — keep it simple"** → Write `USER_ROLE=designer` to `.env`
+- **"Yes, I'm a developer"** → Write `USER_ROLE=developer` to `.env`
+
+If `.env` already exists, update only the `USER_ROLE` line. If it doesn't exist, create it.
+
+This controls Claude's communication style:
+- **Designer mode** (default): Plain language, UX-focused, no jargon, technical steps handled silently
+- **Developer mode**: Technical terms, file references, architecture details, git/build output shown
+
+### Step 6: Welcome & Example Prompts
 
 After successful setup, show this message:
 

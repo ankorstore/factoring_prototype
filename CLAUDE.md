@@ -19,7 +19,6 @@ Lightweight Vue 3 app for building static prototypes using the Ankorstore Design
 - `npm run build` — Type-check + build for static deployment
 - `npm run preview` — Preview production build
 - `npm run upgrade-ds` — Update @ankorstore/design-system to latest
-- `npm run deploy` — Build and deploy to GitHub Pages (pushes `dist/` to `gh-pages` branch)
 - `npm run sync-ds` — Regenerate design tokens from `../design-system/` repo
 
 ## File Conventions
@@ -252,7 +251,7 @@ Utility classes in `src/styles/responsive-utils.css`:
 
 ## Gotchas
 - **SPA routing on GitHub Pages**: Vue Router uses `createWebHistory` — GitHub Pages doesn't handle client-side routing natively. Deep links (e.g., `/orders/123`) will 404 without a custom `404.html` redirect. Dev server handles this fine.
-- **Deploy**: Run `npm run deploy` to build and push to `gh-pages` branch. Set GitHub Pages source to "Deploy from branch" → `gh-pages` / `/ (root)` in repo settings.
+- **Deploy**: Deployment is automated via GitHub Actions on push to `master`.
 - **AkModal ref pattern**: Open modals via `this.$refs.modal.openModal()` (Options API) or template ref + `.value.openModal()` (Composition API)
 - **DS component events**: AkButton uses `@click`, AkSelect uses `@change`, AkTable uses `@rowClick`
 

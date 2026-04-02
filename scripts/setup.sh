@@ -41,6 +41,22 @@ echo ""
 echo "Installing dependencies..."
 npm install
 
+# Set user role for Claude communication style
+if [ ! -f .env ]; then
+  echo ""
+  echo "One more thing — are you comfortable with code and technical terms?"
+  echo "  1) Not really — keep it simple (designer mode, default)"
+  echo "  2) Yes, I'm a developer"
+  read -r -p "Choose [1/2]: " choice
+  if [ "$choice" = "2" ]; then
+    echo "USER_ROLE=developer" > .env
+    echo "Set to developer mode."
+  else
+    echo "USER_ROLE=designer" > .env
+    echo "Set to designer mode."
+  fi
+fi
+
 # Start dev server
 echo ""
 echo "Setup complete! Starting dev server..."

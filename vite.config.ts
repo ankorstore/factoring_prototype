@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { resolve, basename } from 'path'
+import { resolve } from 'path'
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? `/${basename(process.cwd())}/` : '/',
+  base: process.env.VITE_BASE_PATH || '/',
   plugins: [vue()],
   resolve: {
     alias: {
