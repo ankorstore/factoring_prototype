@@ -2,7 +2,7 @@
   <div class="order-list-page">
     <div class="order-list-page__header">
       <h2 class="order-list-page__title">Orders</h2>
-      <AkButton color="primary" symbol="plus" @click="router.push('/factoring/new')">
+      <AkButton color="primary" symbol="plus" @click="$router.push('/factoring/new')">
         Import an external order
       </AkButton>
     </div>
