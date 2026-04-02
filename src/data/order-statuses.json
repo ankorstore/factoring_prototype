@@ -1,0 +1,7 @@
+[
+  { "value": "pending", "label": "Pending", "color": "orange" },
+  { "value": "confirmed", "label": "Confirmed", "color": "blue" },
+  { "value": "shipped", "label": "Shipped", "color": "purple" },
+  { "value": "delivered", "label": "Delivered", "color": "green" },
+  { "value": "cancelled", "label": "Cancelled", "color": "red" }
+]

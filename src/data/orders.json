@@ -1,0 +1,18 @@
+[
+  { "id": "ORD-1001", "reference": "AKS-2026-1001", "brandName": "Maison Balzac", "retailerName": "Le Petit Concept Store", "status": "delivered", "total": 342.50, "currency": "EUR", "itemCount": 8, "createdAt": "2026-03-01" },
+  { "id": "ORD-1002", "reference": "AKS-2026-1002", "brandName": "Ferm Living", "retailerName": "Nordic Home Berlin", "status": "shipped", "total": 1250.00, "currency": "EUR", "itemCount": 24, "createdAt": "2026-03-03" },
+  { "id": "ORD-1003", "reference": "AKS-2026-1003", "brandName": "Hay Design", "retailerName": "Atelier Brut Paris", "status": "confirmed", "total": 780.00, "currency": "EUR", "itemCount": 12, "createdAt": "2026-03-05" },
+  { "id": "ORD-1004", "reference": "AKS-2026-1004", "brandName": "Merci Handy", "retailerName": "The Green Shop London", "status": "pending", "total": 156.80, "currency": "EUR", "itemCount": 40, "createdAt": "2026-03-07" },
+  { "id": "ORD-1005", "reference": "AKS-2026-1005", "brandName": "Papier Tigre", "retailerName": "Stationery Lovers Amsterdam", "status": "cancelled", "total": 89.90, "currency": "EUR", "itemCount": 15, "createdAt": "2026-03-08" },
+  { "id": "ORD-1006", "reference": "AKS-2026-1006", "brandName": "Bonton", "retailerName": "Kids Corner Milano", "status": "delivered", "total": 2100.00, "currency": "EUR", "itemCount": 36, "createdAt": "2026-03-09" },
+  { "id": "ORD-1007", "reference": "AKS-2026-1007", "brandName": "Monoprix Maison", "retailerName": "Casa Moderna Barcelona", "status": "shipped", "total": 445.60, "currency": "EUR", "itemCount": 18, "createdAt": "2026-03-10" },
+  { "id": "ORD-1008", "reference": "AKS-2026-1008", "brandName": "Diptyque", "retailerName": "Scent Gallery Dublin", "status": "confirmed", "total": 3200.00, "currency": "EUR", "itemCount": 6, "createdAt": "2026-03-11" },
+  { "id": "ORD-1009", "reference": "AKS-2026-1009", "brandName": "Le Jacquard Francais", "retailerName": "Home & Table Lisbon", "status": "pending", "total": 567.30, "currency": "EUR", "itemCount": 20, "createdAt": "2026-03-12" },
+  { "id": "ORD-1010", "reference": "AKS-2026-1010", "brandName": "Sezane Home", "retailerName": "Boutique Chic Brussels", "status": "delivered", "total": 890.00, "currency": "EUR", "itemCount": 14, "createdAt": "2026-03-13" },
+  { "id": "ORD-1011", "reference": "AKS-2026-1011", "brandName": "Toast Living", "retailerName": "Design District Vienna", "status": "shipped", "total": 234.00, "currency": "EUR", "itemCount": 10, "createdAt": "2026-03-14" },
+  { "id": "ORD-1012", "reference": "AKS-2026-1012", "brandName": "Aesop", "retailerName": "Pure Beauty Stockholm", "status": "confirmed", "total": 1800.00, "currency": "EUR", "itemCount": 30, "createdAt": "2026-03-15" },
+  { "id": "ORD-1013", "reference": "AKS-2026-1013", "brandName": "Serax", "retailerName": "Modern Living Copenhagen", "status": "pending", "total": 675.40, "currency": "EUR", "itemCount": 22, "createdAt": "2026-03-16" },
+  { "id": "ORD-1014", "reference": "AKS-2026-1014", "brandName": "La Trésorerie", "retailerName": "Vintage Corner Munich", "status": "cancelled", "total": 123.50, "currency": "EUR", "itemCount": 5, "createdAt": "2026-03-17" },
+  { "id": "ORD-1015", "reference": "AKS-2026-1015", "brandName": "Fleux", "retailerName": "Object Store Helsinki", "status": "delivered", "total": 1450.00, "currency": "EUR", "itemCount": 28, "createdAt": "2026-03-18" },
+  { "id": "ORD-1016", "reference": "AKS-2026-1016", "brandName": "Maison Plisson", "retailerName": "Gourmet Select Warsaw", "status": "shipped", "total": 389.20, "currency": "EUR", "itemCount": 16, "createdAt": "2026-03-19" }
+]

@@ -1,0 +1,71 @@
+/* ============================================
+   Responsive Utilities — DS Prototype Template
+   Mobile-first breakpoints aligned with DS v28.
+   xs: 480px | sm: 640px | md: 768px | lg: 1024px | xl: 1280px | 2xl: 1600px
+   ============================================ */
+
+/* --- Visibility: hide below breakpoint (hidden on mobile, visible at bp+) --- */
+.hide-below-xs { display: none; }
+.hide-below-sm { display: none; }
+.hide-below-md { display: none; }
+.hide-below-lg { display: none; }
+.hide-below-xl { display: none; }
+.hide-below-2xl { display: none; }
+
+@media (min-width: 480px) { .hide-below-xs { display: revert; } }
+@media (min-width: 640px) { .hide-below-sm { display: revert; } }
+@media (min-width: 768px) { .hide-below-md { display: revert; } }
+@media (min-width: 1024px) { .hide-below-lg { display: revert; } }
+@media (min-width: 1280px) { .hide-below-xl { display: revert; } }
+@media (min-width: 1600px) { .hide-below-2xl { display: revert; } }
+
+/* --- Visibility: show only below breakpoint (visible on mobile, hidden at bp+) --- */
+@media (min-width: 480px) { .show-below-xs { display: none; } }
+@media (min-width: 640px) { .show-below-sm { display: none; } }
+@media (min-width: 768px) { .show-below-md { display: none; } }
+@media (min-width: 1024px) { .show-below-lg { display: none; } }
+@media (min-width: 1280px) { .show-below-xl { display: none; } }
+@media (min-width: 1600px) { .show-below-2xl { display: none; } }
+
+/* --- Layout reflow: 1 col on mobile → N cols at breakpoint --- */
+.cols-1-md-2, .cols-1-md-3,
+.cols-1-lg-2, .cols-1-lg-3, .cols-1-lg-4,
+.cols-1-xl-3, .cols-1-xl-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .cols-1-md-2 { grid-template-columns: repeat(2, 1fr); }
+  .cols-1-md-3 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .cols-1-lg-2 { grid-template-columns: repeat(2, 1fr); }
+  .cols-1-lg-3 { grid-template-columns: repeat(3, 1fr); }
+  .cols-1-lg-4 { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1280px) {
+  .cols-1-xl-3 { grid-template-columns: repeat(3, 1fr); }
+  .cols-1-xl-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* --- Stack: vertical on mobile, horizontal at breakpoint --- */
+.stack-below-md, .stack-below-lg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+@media (min-width: 768px) { .stack-below-md { flex-direction: row; } }
+@media (min-width: 1024px) { .stack-below-lg { flex-direction: row; } }
+
+/* --- Responsive typography: smaller on mobile, larger at md+ --- */
+.text-responsive-h1 { font-size: var(--text-2xl); line-height: var(--leading-2xl); font-weight: 700; }
+.text-responsive-h2 { font-size: var(--text-xl); line-height: var(--leading-xl); font-weight: 700; }
+.text-responsive-h3 { font-size: var(--text-lg); line-height: var(--leading-lg); font-weight: 600; }
+
+@media (min-width: 768px) {
+  .text-responsive-h1 { font-size: var(--text-4xl); line-height: var(--leading-4xl); }
+  .text-responsive-h2 { font-size: var(--text-2xl); line-height: var(--leading-2xl); }
+  .text-responsive-h3 { font-size: var(--text-xl); line-height: var(--leading-xl); }
+}
