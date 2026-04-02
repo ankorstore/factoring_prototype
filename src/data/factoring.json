@@ -1,0 +1,255 @@
+{
+  "stats": {
+    "totalAdvanced": 37000,
+    "requestsSubmitted": 8,
+    "actionNeeded": 1
+  },
+  "customers": [
+    {
+      "id": "cust-1",
+      "name": "Boutique Lumière",
+      "siren": "456 789 012",
+      "vat": "FR12456789012",
+      "city": "Paris",
+      "address": "12 Rue du Faubourg, 75001 Paris",
+      "contactName": "Marie Dupont",
+      "contactEmail": "marie@example.com",
+      "eligible": true,
+      "eligibilityDate": "15 Feb 2026",
+      "requestCount": 3,
+      "availableCredit": 15000
+    },
+    {
+      "id": "cust-2",
+      "name": "La Cave à Vins",
+      "siren": "654 321 098",
+      "vat": "FR34654321098",
+      "city": "Marseille",
+      "address": "45 Boulevard de la Canebière, 13001 Marseille",
+      "contactName": "Jean Martin",
+      "contactEmail": "jean@example.com",
+      "eligible": true,
+      "eligibilityDate": "20 Feb 2026",
+      "requestCount": 1,
+      "availableCredit": 10000
+    },
+    {
+      "id": "cust-3",
+      "name": "Le Marché Bio",
+      "siren": "789 456 123",
+      "vat": "FR56789456123",
+      "city": "Lyon",
+      "address": "8 Place Bellecour, 69002 Lyon",
+      "contactName": "Sophie Leroy",
+      "contactEmail": "sophie@example.com",
+      "eligible": true,
+      "eligibilityDate": "10 Jan 2026",
+      "requestCount": 2,
+      "availableCredit": 20000
+    },
+    {
+      "id": "cust-4",
+      "name": "Studio Atelier",
+      "siren": "321 654 987",
+      "vat": "FR78321654987",
+      "city": "Bordeaux",
+      "address": "22 Rue Sainte-Catherine, 33000 Bordeaux",
+      "contactName": "Pierre Blanc",
+      "contactEmail": "pierre@example.com",
+      "eligible": false,
+      "eligibilityDate": "5 Jan 2026",
+      "requestCount": 0,
+      "availableCredit": 0
+    },
+    {
+      "id": "cust-5",
+      "name": "Maison Provençale",
+      "siren": "111 222 333",
+      "vat": "FR90111222333",
+      "city": "Nice",
+      "address": "3 Promenade des Anglais, 06000 Nice",
+      "contactName": "Claire Moreau",
+      "contactEmail": "claire@example.com",
+      "eligible": false,
+      "eligibilityDate": "28 Feb 2026",
+      "requestCount": 0,
+      "availableCredit": 0
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-1",
+      "reference": "FACT-2026-0044",
+      "buyerId": "cust-1",
+      "buyerName": "Boutique Lumière",
+      "products": "Organic candles (x24), Scented diffusers (x12)",
+      "amount": 6200,
+      "currency": "EUR",
+      "status": "in-review",
+      "createdDate": "1 Mar 2026",
+      "invoiceRef": "INV-2026-0044"
+    },
+    {
+      "id": "ord-2",
+      "reference": "FACT-2026-0045",
+      "buyerId": "cust-2",
+      "buyerName": "La Cave à Vins",
+      "products": "Wine glasses set (x48), Decanters (x6)",
+      "amount": 3800,
+      "currency": "EUR",
+      "status": "draft",
+      "createdDate": "1 Mar 2026"
+    },
+    {
+      "id": "ord-3",
+      "reference": "FACT-2026-0031",
+      "buyerId": "cust-3",
+      "buyerName": "Le Marché Bio",
+      "products": "Olive oil premium (x100), Honey jars (x50)",
+      "amount": 8400,
+      "currency": "EUR",
+      "status": "funded",
+      "createdDate": "15 Jan 2026",
+      "invoiceRef": "INV-2026-0031"
+    },
+    {
+      "id": "ord-4",
+      "reference": "FACT-2026-0038",
+      "buyerId": "cust-1",
+      "buyerName": "Boutique Lumière",
+      "products": "Ceramic vases (x18), Table linens (x30)",
+      "amount": 4500,
+      "currency": "EUR",
+      "status": "approved",
+      "createdDate": "20 Feb 2026",
+      "invoiceRef": "INV-2026-0038"
+    },
+    {
+      "id": "ord-5",
+      "reference": "FACT-2026-0052",
+      "buyerId": "cust-3",
+      "buyerName": "Le Marché Bio",
+      "products": "Organic tea selection (x200), Herbal infusions (x80)",
+      "amount": 5600,
+      "currency": "EUR",
+      "status": "shipped",
+      "createdDate": "5 Mar 2026",
+      "invoiceRef": "INV-2026-0052"
+    }
+  ],
+  "pendingRequests": [
+    {
+      "id": "pending-1",
+      "reference": "FACT-2026-0044",
+      "buyer": {
+        "name": "Boutique Lumière",
+        "siren": "456 789 012",
+        "city": "Paris",
+        "address": "12 Rue du Faubourg, 75001 Paris",
+        "contactName": "Marie Dupont",
+        "contactEmail": "marie@example.com"
+      },
+      "orderValue": 6200,
+      "eligibleFor": "Full amount",
+      "youReceive": 6014,
+      "feePercent": 3,
+      "status": "pending",
+      "startedDate": "28 Feb 2026",
+      "documents": []
+    },
+    {
+      "id": "pending-2",
+      "reference": "FACT-2026-0045",
+      "buyer": {
+        "name": "La Cave à Vins",
+        "siren": "654 321 098",
+        "city": "Marseille",
+        "address": "45 Boulevard de la Canebière, 13001 Marseille",
+        "contactName": "Jean Martin",
+        "contactEmail": "jean@example.com"
+      },
+      "orderValue": 3800,
+      "eligibleFor": "Full amount",
+      "youReceive": 3686,
+      "feePercent": 3,
+      "status": "pending",
+      "startedDate": "1 Mar 2026",
+      "documents": []
+    }
+  ],
+  "submittedRequests": [
+    {
+      "id": "submitted-1",
+      "reference": "FACT-2026-0044",
+      "buyer": {
+        "name": "Boutique Lumière",
+        "siren": "456 789 012",
+        "city": "Paris",
+        "address": "12 Rue du Faubourg, 75001 Paris",
+        "contactName": "Marie Dupont",
+        "contactEmail": "marie@example.com"
+      },
+      "orderValue": 6200,
+      "eligibleFor": "Full amount",
+      "youReceive": 6014,
+      "feePercent": 3,
+      "status": "in-review",
+      "startedDate": "28 Feb 2026",
+      "submittedDate": "1 Mar 2026",
+      "documents": [
+        { "name": "proforma_boutique_lumiere.pdf", "type": "proforma", "size": "324 KB" },
+        { "name": "invoice_boutique_lumiere_4044.pdf", "type": "invoice", "size": "245 KB" }
+      ]
+    },
+    {
+      "id": "submitted-2",
+      "reference": "FACT-2026-0031",
+      "buyer": {
+        "name": "Le Marché Bio",
+        "siren": "789 456 123",
+        "city": "Lyon",
+        "address": "8 Place Bellecour, 69002 Lyon",
+        "contactName": "Sophie Leroy",
+        "contactEmail": "sophie@example.com"
+      },
+      "orderValue": 8400,
+      "eligibleFor": "Full amount",
+      "youReceive": 8148,
+      "feePercent": 3,
+      "status": "funded",
+      "startedDate": "10 Jan 2026",
+      "submittedDate": "15 Jan 2026",
+      "approvedDate": "16 Jan 2026",
+      "documents": [
+        { "name": "proforma_marche_bio.pdf", "type": "proforma", "size": "298 KB" },
+        { "name": "invoice_marche_bio_0031.pdf", "type": "invoice", "size": "312 KB" }
+      ]
+    },
+    {
+      "id": "submitted-3",
+      "reference": "FACT-2026-0019",
+      "buyer": {
+        "name": "Studio Atelier",
+        "siren": "321 654 987",
+        "city": "Bordeaux",
+        "address": "22 Rue Sainte-Catherine, 33000 Bordeaux",
+        "contactName": "Pierre Blanc",
+        "contactEmail": "pierre@example.com"
+      },
+      "orderValue": 2200,
+      "eligibleFor": "Full amount",
+      "youReceive": 2134,
+      "feePercent": 3,
+      "status": "refused",
+      "startedDate": "5 Jan 2026",
+      "submittedDate": "10 Jan 2026",
+      "documents": [
+        { "name": "proforma_studio_atelier.pdf", "type": "proforma", "size": "156 KB" },
+        { "name": "invoice_studio_atelier_0019.pdf", "type": "invoice", "size": "198 KB" }
+      ]
+    }
+  ],
+  "ariaIban": "XX00 0000 0000 0000 0000 0000 000",
+  "ariaBic": "ARIAFRPP",
+  "assignmentText": "En application de la loi Dailly, la créance résultant de cette facture a été cédée à Aria Finance. Tout paiement doit être effectué sur le compte indiqué."
+}
