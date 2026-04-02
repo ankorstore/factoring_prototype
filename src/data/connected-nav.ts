@@ -4,6 +4,7 @@
 export interface NavChild {
   path: string
   label: string
+  badge?: string
 }
 
 export interface NavItem {
@@ -22,6 +23,7 @@ export const topItems: NavItem[] = [
     icon: 'cart',
     children: [
       { path: '/orders', label: 'All orders' },
+      { path: '/factoring', label: 'Factoring', badge: 'New' },
     ],
   },
   { path: '/network', label: 'My network', icon: 'people' },

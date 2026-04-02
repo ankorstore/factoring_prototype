@@ -21,6 +21,26 @@ const routes = [
     meta: { title: 'Order Detail', icon: 'orders', layout: 'connected' },
   },
   {
+    path: '/factoring',
+    component: () => import('@/pages/FactoringDashboardPage.vue'),
+    meta: { title: 'Factoring', icon: 'orders', layout: 'connected' },
+  },
+  {
+    path: '/factoring/new',
+    component: () => import('@/pages/FactoringNewRequestPage.vue'),
+    meta: { title: 'New Factoring Request', icon: 'orders', layout: 'connected' },
+  },
+  {
+    path: '/factoring/new/review',
+    component: () => import('@/pages/FactoringReviewPage.vue'),
+    meta: { title: 'Review & Submit', icon: 'orders', layout: 'connected' },
+  },
+  {
+    path: '/factoring/request/:id',
+    component: () => import('@/pages/FactoringRequestDetailPage.vue'),
+    meta: { title: 'Loan Request', icon: 'orders', layout: 'connected' },
+  },
+  {
     path: '/showcase/colors',
     component: () => import('@/pages/showcase/ColorsPage.vue'),
     meta: { title: 'Colors', icon: 'grid' },

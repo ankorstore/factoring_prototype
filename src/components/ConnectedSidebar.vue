@@ -31,6 +31,7 @@
               :class="{ 'sidebar__child--active': route.path === child.path }"
             >
               {{ child.label }}
+              <span v-if="child.badge" class="sidebar__child-badge">{{ child.badge }}</span>
             </router-link>
           </div>
         </template>
@@ -174,6 +175,20 @@ function onItemClick(item: NavItem) {
   text-decoration: none;
 }
 .sidebar__child--active { font-weight: 600; color: var(--primary); }
+
+.sidebar__child-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 6px;
+  height: 18px;
+  border-radius: var(--radius-sm);
+  background: var(--success);
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: auto;
+}
 
 .sidebar__label,
 .sidebar__badge { display: none; }
