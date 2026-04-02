@@ -250,8 +250,8 @@ Utility classes in `src/styles/responsive-utils.css`:
 - **Playwright MCP**: Configured in `.mcp.json` (project-scoped, shared via git). Enables AI agents to take screenshots, click through pages, test responsive layouts, and verify component rendering. Start dev server first (`npm run dev`), then use Playwright tools to interact with `http://localhost:3000`.
 
 ## Gotchas
-- **SPA routing on GitHub Pages**: Vue Router uses `createWebHistory` — GitHub Pages doesn't handle client-side routing natively. Deep links (e.g., `/orders/123`) will 404 without a custom `404.html` redirect. Dev server handles this fine.
-- **Deploy**: Deployment is automated via GitHub Actions on push to `master`.
+- **SPA routing on GitHub Pages**: Handled by `public/404.html` + a script in `index.html`. The 404 page redirects to the base path with the route as a query string, and index.html restores it via `history.replaceState`.
+- **Deploy**: Automated via GitHub Actions on push to `master`. Base path is auto-detected from the Pages URL (works with both `github.io/repo/` and custom domains).
 - **AkModal ref pattern**: Open modals via `this.$refs.modal.openModal()` (Options API) or template ref + `.value.openModal()` (Composition API)
 - **DS component events**: AkButton uses `@click`, AkSelect uses `@change`, AkTable uses `@rowClick`
 
