@@ -308,6 +308,24 @@ interface Props {
 </AkButton>
 ```
 
+### When to use `outlined`
+
+`outlined` is a **boolean flag**, not a variant name. The button has only two visual weights: filled (default) and outlined. There is **no** `variant` prop — do not write `variant="secondary"` or `variant="outline"`.
+
+| Use case | Style | Example |
+|---|---|---|
+| Single main action of page/section/wizard step | Filled (no flag) | `<AkButton color="primary">Save</AkButton>` |
+| Cancel, Back, Replace, Copy, "finish later", any secondary | Outlined | `<AkButton outlined>Cancel</AkButton>` |
+| Destructive action where user is committing | Filled error | `<AkButton color="error">Delete</AkButton>` |
+| Destructive action that dismisses | Outlined | `<AkButton outlined>Cancel</AkButton>` |
+
+**Vocabulary map** — when a request uses any of these words, reach for `outlined`:
+- "secondary button", "outline button", "outlined button"
+- "ghost button", "tertiary button"
+- "cancel-style button", "back button", "subdued button"
+
+**Pairing rule:** when two actions sit side by side in an action bar, **one filled + one outlined**. Never two filled primaries in the same bar.
+
 ## AkAlert - Alert Component
 
 ### Description & Purpose
@@ -985,7 +1003,7 @@ interface AkFormLinesProps {
     :isVisible="showShipping"
   >
     <template #actions>
-      <AkButton variant="secondary" @click="toggleShipping">
+      <AkButton outlined @click="toggleShipping">
         {{ showShipping ? 'Hide' : 'Show' }}
       </AkButton>
     </template>

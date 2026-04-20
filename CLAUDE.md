@@ -121,6 +121,26 @@ Run `npm run sync-ds` to regenerate tokens from `../design-system/` repo.
 AkTable columns: `{ name: string, label: string, width?: string, align?: 'left'|'center'|'right' }`
 AkTable custom cells: `#item.[columnName]="{ item }"` — Custom headers: `#column.[columnName]`
 
+### AkButton: filled vs outlined (CRITICAL)
+
+AkButton has **two visual weights** — filled (default) and outlined. There is **NO** `variant` prop. Do not write `variant="secondary"` or `variant="outline"` — use the `outlined` flag.
+
+- **Filled** (`color="primary"`, no flag) → the **one** main action of the page, section, card, or wizard step. E.g., Save, Submit, Continue, Confirm, main CTA.
+- **Outlined** (`outlined` flag) → **everything else**. Cancel, Back, Replace, Copy, "Save & finish later", secondary actions, dual-action secondary, back-navigation, filter reset.
+- **Error filled** (`color="error"`) → destructive action the user is committing (Delete, Remove).
+- **Pairing rule** → when two actions sit side by side, **one filled + one outlined**. Never two filled primaries in the same action bar.
+
+**Vocabulary map** — these all mean `outlined`:
+- "secondary button", "outline button", "outlined"
+- "ghost button", "tertiary button"
+- "cancel-style button", "back button", "subdued button"
+
+**Reference pairings in this project:**
+- `FactoringNewRequestPage.vue` → `[Cancel · outlined] [Check eligibility · primary]`
+- `FactoringReviewPage.vue` step footer → `[← Back · outlined] [Continue · primary]`
+- `FactoringReviewPage.vue` final step → `[← Back · outlined] [Save & finish later · outlined] [Submit · primary]`
+- `OrderDetailPage.vue` header → `[Back to Orders · outlined]`
+
 **Full API for all 18+ components:** See `src/llms-component-catalog.md`
 
 ## Common Recipes

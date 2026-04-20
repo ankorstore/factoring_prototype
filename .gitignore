@@ -7,3 +7,4 @@ plans/
 __pycache__/
 *.pyc
 .playwright-mcp/
+.claude/session-state/
